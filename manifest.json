@@ -2,7 +2,7 @@
   "name": "Dee Jay's Fashion",
   "short_name": "Dee Jay's",
   "description": "Premium Streetwear and Senator Fusion Boutique in Nigeria.",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#111111",
