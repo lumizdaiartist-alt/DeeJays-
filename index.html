@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dee Jay's Fashion | Home</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Premium Nigerian Streetwear and Luxury Senator Fusion Boutique. Quality fashion for the modern man.">
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Dee Jay\'s App: Online'))
+            .catch(err => console.log('Dee Jay\'s App: Pending', err));
+        });
+      }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #D4AF37; --black: #111111; --white: #ffffff; --gray: #f4f4f4; }
@@ -37,17 +52,6 @@
             .nav-links a { border: none; padding: 0 15px; }
         }
     </style>
-    <link rel="manifest" href="manifest.json">
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service Worker Registered'))
-        .catch(err => console.log('Service Worker Failed', err));
-    });
-  }
-</script>
 </head>
 <body>
 
@@ -73,7 +77,7 @@
     <div class="about" id="about">
         <h2>The Dee Jay Story</h2>
         <p>At Dee Jay's Fashion Store, we cater to the modern Nigerian man who wants to lead the boardroom in a crisp Senator suit on Monday, and dominate the streets in baggy cargos and fresh Nikes on Friday.</p>
-        <p>Our Native wears are crafted with the famous "7-star" wool, ensuring that the fabric doesn't fade or wear out easily. For our streetwear, we source only authentic sneakers and high-GSM cotton for our shirts. Quality is our signature.</p>
+        <p>Our Native wears are crafted with the famous "7-star" wool, ensuring that the fabric doesn't fade or wear out easily. For our streetwear, we source only authentic sneakers and high-GSM cotton for our shirts.</p>
         <p>Located in the heart of Lagos, we ship nationwide. 100% Proudly Nigerian.</p>
     </div>
 
