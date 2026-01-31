@@ -64,6 +64,18 @@
             .action-area { position: relative; padding: 0; box-shadow: none; margin-top: 30px; }
         }
     </style>
+    <link rel="manifest" href="manifest.json">
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker Registered'))
+        .catch(err => console.log('Service Worker Failed', err));
+    });
+  }
+</script>
+
 </head>
 <body>
 
