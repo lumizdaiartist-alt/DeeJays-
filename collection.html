@@ -2,8 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Collections | Dee Jay's Fashion</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111111">
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW Active'))
+            .catch(err => console.log('SW Error', err));
+        });
+      }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #D4AF37; --black: #111111; --white: #ffffff; }
@@ -19,7 +33,6 @@
 
         .grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
         
-        /* Each product card is now a link */
         .card { border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border: 1px solid #eee; display: block; transition: 0.3s ease; }
         .card:hover { transform: translateY(-5px); }
 
@@ -37,18 +50,6 @@
 
         @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
     </style>
-    <link rel="manifest" href="manifest.json">
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service Worker Registered'))
-        .catch(err => console.log('Service Worker Failed', err));
-    });
-  }
-</script>
-
 </head>
 <body>
 
@@ -56,7 +57,7 @@
         <a href="index.html" style="font-family: 'Playfair Display'; font-weight: 900; letter-spacing: 1px; color: black;">DEE JAY'S</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="collections.html" style="color: var(--gold);">Collections</a>
+            <a href="collection.html" style="color: var(--gold);">Collections</a>
         </div>
     </nav>
 
