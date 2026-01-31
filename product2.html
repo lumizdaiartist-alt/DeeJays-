@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buy Air Jordan 1 'Panda' | Dee Jay's</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111111">
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Product 2 Loaded'))
+            .catch(err => console.log('SW Error', err));
+        });
+      }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -34,6 +48,71 @@
             object-fit: cover; height: 500px;
         }
 
+        .content { padding: 10px 0; }
+        .brand-name { color: var(--gold); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+        .product-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; margin: 10px 0; }
+        .price-tag { font-size: 1.8rem; font-weight: 700; color: var(--black); margin-bottom: 25px; display: block; }
+
+        .description-box { margin-bottom: 30px; border-top: 1px solid #eee; padding-top: 20px; }
+        .description-box h4 { margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .description-box p { color: #555; font-size: 0.95rem; margin-bottom: 15px; }
+
+        /* --- ACTION AREA --- */
+        .action-area {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: white; padding: 20px 5%;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+            display: flex; gap: 10px;
+        }
+
+        .order-wa {
+            flex: 1; background: #25D366; color: white; text-align: center;
+            padding: 18px; border-radius: 10px; text-decoration: none;
+            font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .product-container { display: flex; gap: 50px; padding-top: 60px; }
+            .image-gallery { flex: 1; }
+            .content { flex: 1; }
+            .action-area { position: relative; padding: 0; box-shadow: none; margin-top: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="collection.html" class="back-btn">← BACK TO SHOP</a>
+        <div class="logo-small">DEE JAY'S</div>
+    </nav>
+
+    <div class="product-container">
+        <div class="image-gallery">
+            <img src="pic2.jpg" alt="Air Jordan 1 Panda">
+        </div>
+
+        <div class="content">
+            <span class="brand-name">Premium Footwear</span>
+            <h1 class="product-title">Air Jordan 1 Mid 'Panda' – Black/White Iconic High-Tops</h1>
+            <span class="price-tag">₦30,000</span>
+
+            <div class="description-box">
+                <h4>Description</h4>
+                <p>The timeless Black and White colorway, famously known as the 'Panda,' arrives on the Air Jordan 1 Mid silhouette. A must-have for every sneakerhead in Nigeria.</p>
+                <p><strong>Composition:</strong> High-quality leather overlays with a crisp white base. Features the iconic Wings logo on the collar and a comfortable air-sole unit for all-day wear.</p>
+                <p><strong>Style Tip:</strong> Pairs perfectly with our Gallery Dept. shorts or a sharp pair of black cargos.</p>
+            </div>
+
+            <div class="action-area">
+                <a href="https://wa.me/2349166819937?text=Hello%20Dee%20Jay's,%20I%20am%20interested%20in%20the%20Air%20Jordan%201%20Mid%20'Panda'%20(₦30,000).%20Are%20sizes%20available?" class="order-wa">
+                    ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
         .content { padding: 10px 0; }
         .brand-name { color: var(--gold); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
         .product-title { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1.2; margin: 10px 0; }
